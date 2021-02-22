@@ -19,8 +19,7 @@ jobs:
 
       - name: Install dependencies ubuntu
         run: |
-          # install pip=>20.1 to use "pip cache dir"
-          apt install -qq -y pandoc
+          sudo apt install -qq -y pandoc
 
       - name: Prepare the environment
         run: |
