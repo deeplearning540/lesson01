@@ -37,21 +37,23 @@ jobs:
         run: |
           npm config list
           npm config set prefix '~/.npm-global'
+          npm config list
+          echo "the above should contain" $NPM_CONFIG_PREFIX
 
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: '2'
 
-      - name: Check pandoc version
+      - name: Check pandoc version and install dependencies
         run: |
-          dnf install -y make wget sed curl jq pandoc
+          dnf install -y coreutils make wget sed curl jq pandoc
           pandoc --version
           npm config list
 
       - name: Prepare the environment
         run: |
-          sudo make prepare
+          make prepare
 
       - name: build slides
         run: |
