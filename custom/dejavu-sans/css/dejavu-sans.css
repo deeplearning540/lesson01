@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('../webfonts/dejavu-sans-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../webfonts/dejavu-sans-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../webfonts/dejavu-sans-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../webfonts/dejavu-sans-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../webfonts/dejavu-sans-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../webfonts/dejavu-sans-webfont.svg#dejavu_sansregular') format('svg'); /* Legacy iOS */
+}
