@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container: 
-      image: pandoc/ubuntu:2.9.2.1
+      image: fedora:32
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "True"
 
@@ -39,8 +39,7 @@ jobs:
 
       - name: Check pandoc version
         run: |
-          apt update -qq -y
-          apt install -y build-essential wget sed curl jq
+          dnf install -y make wget sed curl jq pandoc python2.7 python3
           pandoc --version
 
       - name: Prepare the environment
