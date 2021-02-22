@@ -17,6 +17,7 @@ jobs:
       image: fedora:32
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "True"
+        NPM_CONFIG_PREFIX: ~/.npm-global
 
     strategy:
       matrix:
@@ -32,6 +33,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: reset node config
+        run: |
+          npm config list
+          npm config set prefix '~/.npm-global'
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -39,14 +45,15 @@ jobs:
 
       - name: Check pandoc version
         run: |
-          dnf install -y make wget sed curl jq pandoc python2.7 python3
+          dnf install -y make wget sed curl jq pandoc
           pandoc --version
+          npm config list
 
       - name: Prepare the environment
         run: |
           sudo make prepare
 
-      - name: build slids
+      - name: build slides
         run: |
           make index.html
 
