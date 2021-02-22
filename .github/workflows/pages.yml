@@ -26,6 +26,7 @@ jobs:
       - name: Install dependencies ubuntu
         run: |
           sudo apt install -qq -y pandoc
+          pandoc --version
 
       - name: Prepare the environment
         run: |
