@@ -32,7 +32,6 @@ reveal.js/node_modules : reveal_patched
 	@cd reveal.js && npm install && npm run build -- css-themes
 
 soft_prepare : reveal_patched reveal.js/node_modules
-	@npm install decktape
 
 reveal.js/css/theme/source/%.scss : custom/themes/%.scss
 	@cp -rv $< $@
@@ -52,6 +51,9 @@ theme_prepare : reveal.js/css/theme/images/helmholtz_ai_thin.png \
 css-themes: theme_prepare
 	@cd reveal.js && npm run build -- css-themes
 
+prepared_for_pdfs :
+	@npm install decktape
+
 prepare : soft_prepare css-themes
 
 %.html : %.md css-themes
@@ -70,7 +72,7 @@ $(OUTPUTPDF): index.pdf
 
 pdf: $(OUTPUTPDF)
 
-%.pdf : %.html
+%.pdf : %.html prepared_for_pdfs
 	$(DTAPP) reveal $<\?fragments=true $@
 
 print_images: index.md
