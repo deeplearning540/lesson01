@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  slidedeck:
 
     runs-on: ubuntu-latest
 
