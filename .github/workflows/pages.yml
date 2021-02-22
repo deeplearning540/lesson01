@@ -47,7 +47,7 @@ jobs:
 
       - name: Check pandoc version and install dependencies
         run: |
-          dnf install -y coreutils make wget sed curl jq pandoc
+          dnf install -y coreutils make wget sed curl jq pandoc git
           pandoc --version
           npm config list
 
