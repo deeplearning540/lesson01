@@ -31,7 +31,7 @@ jobs:
       - name: Check pandoc version
         run: |
           apt update -qq -y
-          apt install -y build-essential
+          apt install -y build-essential wget sed
           pandoc --version
 
       - name: Prepare the environment
