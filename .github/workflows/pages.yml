@@ -44,7 +44,7 @@ jobs:
 
       - name: Prepare the environment
         run: |
-          make prepare
+          sudo make prepare
 
       - name: build slids
         run: |
