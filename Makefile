@@ -1,10 +1,11 @@
 DTAPP ?= $(HOME)/node_modules/.bin/decktape
-OUTPUTPDF?=test.pdf
+
+OUTPUTPDF?=$(shell basename $(PWD))-$(USER).pdf
 
 all: index.html
 
 reveal-latest.tar.gz :
-	# @wget -O $@ $(shell curl -s https://api.github.com/repos/hakimel/reveal.js/releases/latest|jq -r '.tarball_url')
+	#wget -O $@ $(shell curl -s https://api.github.com/repos/hakimel/reveal.js/releases/latest|jq -r '.tarball_url')
 	@wget -O $@ https://github.com/hakimel/reveal.js/archive/3.9.2.tar.gz
 
 
@@ -13,26 +14,24 @@ reveal.js : reveal-latest.tar.gz
 	@tar -xzvf $<
 	@ln -s -f reveal.js-3* $@
 
-reveal.js/css/theme :
-	@mkdir -p $@
+reveal_patched : reveal.js
+	@sed -i -e '/node-sass/s/4.13/4.14/g' reveal.js/package.json
 
-reveal.js/css/theme/images :
-	@mkdir -p $@
-
-reveal.js/css/theme/hzdr.css : reveal.js/css/theme extras/reveal.js/css/theme/hzdr.css reveal.js
+reveal.js/css/theme/hzdr.css : extras/reveal.js/css/theme/hzdr.css reveal_patched
 	@ln -s -f $(PWD)/extras/reveal.js/css/theme/hzdr.css reveal.js/css/theme/hzdr.css
 
-reveal.js/css/theme/dejavu-sans : reveal.js
+reveal.js/css/theme/dejavu-sans : reveal_patched
 	@cp -rv custom/themes/fonts reveal.js/css/theme
 
-reveal.js/css/theme/images/%.png : custom/themes/images/%.png reveal.js reveal.js/css/theme/images
+reveal.js/css/theme/images/%.png : custom/themes/images/%.png reveal_patched
+	@mkdir -p reveal.js/css/theme/images/
 	@cp -rv $< $@
 
 
-reveal.js/node_modules : reveal.js
+reveal.js/node_modules : reveal_patched
 	@cd reveal.js && npm install && npm run build -- css-themes
 
-soft_prepare : reveal.js reveal.js/node_modules
+soft_prepare : reveal_patched reveal.js/node_modules
 	@npm install decktape
 
 reveal.js/css/theme/source/%.scss : custom/themes/%.scss
@@ -73,9 +72,6 @@ pdf: $(OUTPUTPDF)
 
 %.pdf : %.html
 	$(DTAPP) reveal $<\?fragments=true $@
-#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default \
-    -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages \
-    -dCompressFonts=true -r150 -sOutputFile=output.pdf input.pdf
 
 print_images: index.md
 	@grep '\!\[' index.md|sed -e 's@.*(\(.*\)).*@\1@'|sed -e 's/{\(.*\)}/\1/'
