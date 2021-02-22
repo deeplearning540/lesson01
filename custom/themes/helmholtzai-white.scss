@@ -1,0 +1,84 @@
+/**
+ * GFZ corporate design theme for reveal.js.
+ * Author: Maximilian Dolling
+ * fork from Achim Staebler's Solarized theme
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(fonts/dejavu-sans/css/dejavu-sans.min.css);
+
+// Include fontawesome
+@import url(fonts/fontawesome/css/all.css);
+
+// Include hermann for titles
+@import url(fonts/hermann/css/hermann.min.css);
+
+
+/**
+ * color palette from corporate design
+ * http://media-intranet.gfz-potsdam.de/gfz/wv/%c3%96A/Richtlinien_Corporate-Design.pdf
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+/**
+ * color list
+ * higher number means lighter color
+ * base 4 is lighter than base 3, but the same color
+ */
+$black:      #000000;
+$white:      #ffffff;
+$base1:      #00589c;
+$base2:      #0062a4;
+$base3:      #2f80b8;
+$base4:      #a4c5e1;
+$base5:      #dfebf5;
+$grey1:      #515151;
+$grey2:      #9c9c9c;
+$grey3:      #b9b9b9;
+$green:      #144d28;
+$orange:     #ed8500;
+$orange_red: #f73f07;
+$dark_blue:  #00457a;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $white;
+$headingColor: $white;
+$headingTextShadow: none;
+$backgroundColor: $base1;
+$linkColor: $grey3;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $base3;
+$mainFont: 'DejaVu Sans', sans-serif;
+//$headingFont: 'DejaVu Sans', Impact, sans-serif;
+$headingFont: 'Hermann', Impact, sans-serif;
+
+// overwrite Background generator
+@mixin bodyBackground() {
+	background: $backgroundColor;
+	background-image: url(images/helmholtz_ai_thin.png), url(images/helmholtz_header_footer.png);
+    background-size: 25%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 0%, 0% 0%;
+}
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
