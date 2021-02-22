@@ -28,18 +28,17 @@ jobs:
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v1
 
-      - name: Install dependencies ubuntu
+      - name: Check pandoc version
         run: |
-          apt install -qq -y pandoc
           pandoc --version
 
       - name: Prepare the environment
         run: |
-            make prepare
+          make prepare
 
       - name: build slids
         run: |
-            make index.html
+          make index.html
 
       # https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-static-site-generators-with-python
       - name: Deploy
