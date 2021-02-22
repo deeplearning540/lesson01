@@ -30,6 +30,7 @@ jobs:
 
       - name: Check pandoc version
         run: |
+          apt-get install build-essential
           pandoc --version
 
       - name: Prepare the environment
