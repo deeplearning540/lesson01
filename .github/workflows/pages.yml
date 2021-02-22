@@ -53,7 +53,6 @@ jobs:
 
       - name: Prepare the environment
         run: |
-          npm install --unsafe-perm node-sass@4.14
           make prepare
 
       - name: build slides
