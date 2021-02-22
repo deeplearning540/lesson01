@@ -8,8 +8,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./reveal.js/css/reset.css">
   <link rel="stylesheet" href="./reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="./reveal.js/css/theme/helmholtzai-dark.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -27,26 +33,26 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Deep Learning in 540 minutes</h1>
   <p class="subtitle"><a href="mailto:p.steinbach@hzdr.de">Peter Steinbach</a> <br> (HZDR)</p>
   <p class="author"><br> <a href="https://github.com/psteinb"><i class="fab fa-github-square"></i> psteinb</a> <a href="https://twitter.com/psteinb_"><span class="fab fa-twitter-square"></span> psteinb_</a></p>
   <p class="date">Somewhere, Mar 1, 2021</p>
 </section>
 
-<section><section id="what-is-this-about" class="titleslide slide level1"><h1>What is this about?</h1></section><section id="section" class="slide level2">
+<section><section id="what-is-this-about" class="title-slide slide level1"><h1>What is this about?</h1></section><section id="section" class="slide level2">
 <h2></h2>
 <p><i class="fas fa-question-circle fa-9x"></i></p>
 </section><section id="some-image" class="slide level2">
 <h2>some image</h2>
 <figure>
-<img src="images/HZDR_Aerial_400px.jpg" alt="en.wikipedia.org:HZDR" height="800" /><figcaption>en.wikipedia.org:HZDR</figcaption>
+<img data-src="images/HZDR_Aerial_400px.jpg" height="800" alt="" /><figcaption>en.wikipedia.org:HZDR</figcaption>
 </figure>
-<p>::: notes</p>
+<aside class="notes">
 <ul>
 <li>the image is small</li>
 </ul>
-<p>:::</p>
+</aside>
 </section><section id="some-text" class="slide level2">
 <h2>some text</h2>
 <ul>
@@ -55,27 +61,26 @@
 <li>baz</li>
 </ul>
 </section></section>
-<section><section id="advanced-features" class="titleslide slide level1"><h1>advanced features</h1></section><section id="columns" class="slide level2">
+<section><section id="advanced-features" class="title-slide slide level1"><h1>advanced features</h1></section><section id="columns" class="slide level2">
 <h2>columns!!</h2>
-<p>:::::::::::::: {.columns}</p>
-<p>::: {.column width=&quot;40%&quot;}</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <p>LEFT!</p>
 <p> </p>
 <p><i class="fas fa-clipboard-check fa-9x"></i> <!-- ![by flaticon.com:Freepik](images/artificial-intelligence_flaticon_freepik.png) --></p>
-<p>:::</p>
-<p>::: {.column width=&quot;60%&quot;}</p>
+</div><div class="column" style="width:60%;">
 <p>   </p>
-<p>::: incremental</p>
+<div>
 <ul>
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>three</p></li>
+<li class="fragment"><p>one</p></li>
+<li class="fragment"><p>two</p></li>
+<li class="fragment"><p>three</p></li>
 </ul>
-<p>:::</p>
-<p>:::</p>
-<p>:::</p>
+</div>
+</div>
+</div>
 </section></section>
-<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="finally" class="slide level2" style="font-size: 1.2em">
+<section><section id="summary" class="title-slide slide level1"><h1>Summary</h1></section><section id="finally" class="slide level2" style="font-size: 1.2em">
 <h2>Finally</h2>
 <p> </p>
 <p><em>Thank you for your Attention!</em><br />
@@ -84,7 +89,6 @@
     </div>
   </div>
 
-  <script src="./reveal.js/lib/js/head.min.js"></script>
   <script src="./reveal.js/js/reveal.js"></script>
 
   <script>
@@ -94,6 +98,8 @@
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
@@ -104,7 +110,7 @@
         dependencies: [
           { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: './reveal.js/plugin/notes/notes.js', async: true }
+          { src: './reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

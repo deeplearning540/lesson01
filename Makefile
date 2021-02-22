@@ -29,7 +29,7 @@ reveal.js/css/theme/images/%.png : custom/themes/images/%.png reveal_patched
 
 
 reveal.js/node_modules : reveal_patched
-	@cd reveal.js && npm install && npm run build -- css-themes
+	@cd reveal.js && npm install --unsafe-perm && npm run build -- css-themes
 
 soft_prepare : reveal_patched reveal.js/node_modules
 
