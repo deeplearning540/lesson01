@@ -12,7 +12,7 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
-      
+
     container: 
       image: pandoc/ubuntu:2.9.2.1
 
@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies ubuntu
         run: |
-          sudo apt install -qq -y pandoc
+          apt install -qq -y pandoc
           pandoc --version
 
       - name: Prepare the environment
