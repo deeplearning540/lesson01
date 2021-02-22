@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: pandoc/ubuntu:2.9.2.1 #ubuntu-latest
     strategy:
       matrix:
         # Include all major maintenance + active LTS Node.js versions.
