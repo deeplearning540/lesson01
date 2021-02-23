@@ -48,7 +48,7 @@ jobs:
       - name: Check pandoc version and install dependencies
         run: |
           apt update -qq -y
-          apt install -y build-essential wget sed curl jq coreutils
+          apt install -y build-essential wget sed curl jq coreutils git
           pandoc --version
           npm config list
 
