@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container: 
-      image: fedora:32
+      image: pandoc/ubuntu:2.9.2.1
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "True"
         NPM_CONFIG_PREFIX: ~/.npm-global
@@ -47,8 +47,8 @@ jobs:
 
       - name: Check pandoc version and install dependencies
         run: |
-          dnf update -y
-          dnf install -y coreutils make wget sed curl jq pandoc git
+          apt update -qq -y
+          apt install -y build-essential wget sed curl jq coreutils
           pandoc --version
           npm config list
 
