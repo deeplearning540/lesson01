@@ -127,15 +127,31 @@ deep learning
 
 <!-- https://www.pexels.com/photo/aerial-photography-of-mountain-covered-with-thick-cloud-formation-2943226/ -->
 
-## What you can expect ... { style="font-size: 1.5em;" }
+## What motivates me ... { style="font-size: 1.75em;" }
 
-- **[teaching for inclusion](https://computinged.wordpress.com/2020/07/27/proposal-2-to-change-cs-education-to-reduce-inequity-stop-allocating-rationing-or-curving-down-grades/)**  
+**[teaching for inclusion](https://computinged.wordpress.com/2020/07/27/proposal-2-to-change-cs-education-to-reduce-inequity-stop-allocating-rationing-or-curving-down-grades/)**  
+
 ,,Helping the students with less computing background succeed makes a much bigger difference for society long-term than does keeping entertained the most privileged students." (Mark Guzdial, 2020)
 
-- adapted **[inverted classroom](https://en.wikipedia.org/wiki/Flipped_classroom)**
-  + instructions as video (each learner decides the speed, can be completed outside class)
-  + learning in teams - together
-  + many exercises (more than you can complete)
+## For the bored ... { style="font-size: 1.5em;" }
+
+- [IN2P3 School of Statistics](https://indico.in2p3.fr/event/20220/)
+
+- Sebastian Raschka: 
+
+  + [Introduction to Deep Learning and Generative Models](http://pages.stat.wisc.edu/~sraschka/teaching/stat453-ss2021)
+  + [Introduction to Machine Learning and Statistical Pattern Classification](http://pages.stat.wisc.edu/~sraschka/teaching/stat451-fs2020) 
+
+## What you can expect: adapted [inverted classroom](https://en.wikipedia.org/wiki/Flipped_classroom) { style="font-size: 1.5em;" }
+
+&nbsp;
+
++ instructions as video 
+  - each learner decides the speed
+  - can be completed outside class
++ learning in teams - together
++ many exercises (more than you can complete)
+
 
 ## How this will work { style="font-size: 1.5em;" }
 
@@ -193,6 +209,7 @@ __Each team__ ...
 - Oleg Filatov
 - Moritz Scham
 - Lucas Wiens
+- Helene Hoffmann
 
 :::
 
@@ -202,15 +219,43 @@ __Each team__ ...
 
 **Thank you!**
 
+## Agenda { style="font-size: 1.75em;" }
+
+&nbsp;
+
+
+:::::::::::::: {.columns}
+
+::: {.column width="50%" }
+
+1. Diving into Regression
+2. Enter Clustering
+3. From Clustering To Classification
+4. Classification Performance ROCs
+
+:::
+
+::: {.column width="50%"}
+
+5. Neural Networks as Code
+6. How did we train
+7. CNNs
+8. Deep Learning is ML too
+
+:::
+
+:::::::::::::::
+
+
 # Summary
 
-## Enjoy {style="font-size: 1.75em"}
+## Learn! {style="font-size: 1.75em"}
 
 &nbsp;
 
 - be positive
-- help each-other
-- communicate 
+- help each-other (hackmd)
+- communicate (mattermost)
 - decide together
 
 &nbsp;
