@@ -189,31 +189,11 @@ __Each team__ ...
 
 &nbsp;
 
-:::::::::::::: {.columns}
-
-::: {.column width="50%" }
-
-- Erik Buhmann
-- Sascha Diefenbacher
-- Manuel Sommerhalder
-- William Korcari
-- Tobias Lösche
-- David Brunner
-
-:::
-
-::: {.column width="50%"}
-
-- Mykyta Shchedrolosiev
-- Jonas Rübenach
-- Oleg Filatov
-- Moritz Scham
-- Lucas Wiens
-- Helene Hoffmann
-
-:::
-
-:::::::::::::::
+- Steve Schmerler
+- Dominik Thalmeier
+- Gerome Vivar 
+- Dominik Vilsmeier 
+- Peter Steinbach
 
 &nbsp;
 
@@ -228,19 +208,17 @@ __Each team__ ...
 
 ::: {.column width="50%" }
 
-1. Diving into Regression
-2. Enter Clustering
-3. From Clustering To Classification
-4. Classification Performance ROCs
+1. Enter Clustering
+2. From Clustering To Classification
+3. Classification Performance ROCs
 
 :::
 
 ::: {.column width="50%"}
 
-5. Neural Networks as Code
-6. How did we train
-7. CNNs
-8. Deep Learning is ML too
+5. Classification by a Neural Network using Keras
+6. Monitor the training process
+7. Networks are like onions
 
 :::
 
