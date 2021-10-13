@@ -2,7 +2,7 @@
 author: <br> <a href="https://github.com/psteinb"><i class="fab fa-github-square"></i> psteinb</a>   <a href="https://twitter.com/psteinb_"><span class="fab fa-twitter-square"></span> psteinb_</a>
 title: Deep Learning in 540 minutes
 subtitle: <a href="mailto:p.steinbach@hzdr.de">Peter Steinbach</a> <br> (HZDR)
-date: Somewhere, Mar 1, 2021
+date: Somewhere, 2021
 width: 1920
 height: 1080
 center: false
