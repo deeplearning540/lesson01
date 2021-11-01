@@ -4,7 +4,7 @@ This repo helps to build presentations in the helmholtz AI layout from markdown 
 
 ## slides
 
-To view the slides, consult [deeplearning540.github.io/lesson00](https://deeplearning540.github.io/lesson00).
+To view the slides, consult [deeplearning540.github.io/lesson01](https://deeplearning540.github.io/lesson01).
 
 ## How to build
 
